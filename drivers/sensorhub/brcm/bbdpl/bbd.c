@@ -903,7 +903,6 @@ ssize_t bbd_urgent_patch_read(struct file *user_filp, char __user *buf, size_t s
 
 		urgent_patch_size = ret;
 		pr_err("[SSPBBD] %s : total: %d  patch size: %d", __func__, fsize, urgent_patch_size);
-
 		if (offset >= urgent_patch_size) {	// signal EOF 
 			pr_err("[SSPBBD] %s : signal EOF", __func__);
 
