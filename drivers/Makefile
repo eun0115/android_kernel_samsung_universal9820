@@ -220,13 +220,6 @@ obj-y				+= sensors/
 # Fingerprint sensor
 obj-$(CONFIG_SENSORS_FINGERPRINT)	+= fingerprint/
 
-#TZIC
-obj-$(CONFIG_TZIC)	+= security/samsung/tzic/
-
-# FIVE TEE driver
-obj-$(CONFIG_FIVE_TEE_DRIVER)	+= security/samsung/five_tee_driver/
-obj-$(CONFIG_ICD)		+= security/samsung/icdrv/
-
 # SPU signature verify
 obj-$(CONFIG_SPU_VERIFY)        += spu_verify/
 
