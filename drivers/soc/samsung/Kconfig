@@ -10,6 +10,13 @@ config EXYNOS_CHIPID
 	depends on ARCH_EXYNOS
 	select SOC_BUS
 
+config BYPASS_CPU_THROTTLING
+	bool "CPU throttling bypass feature"
+	default n
+	depends on ECT
+	help
+	  If enabled, cpu frequencies will not be throttled until temperature is above 95"C
+
 config EXYNOS_PMU
 	bool "Exynos PMU controller driver" if COMPILE_TEST
 	depends on ARCH_EXYNOS || ((ARM || ARM64) && COMPILE_TEST)
