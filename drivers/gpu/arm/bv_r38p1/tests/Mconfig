@@ -21,7 +21,7 @@
 menuconfig MALI_KUTF
 	bool "Build Mali Kernel Unit Test Framework modules"
 	depends on MALI_MIDGARD && MALI_DEBUG
-	default y if BACKEND_KERNEL && MALI_DEBUG
+	default n if BACKEND_KERNEL && MALI_DEBUG
 	help
 	  This option will build the Mali testing framework modules.
 
@@ -43,7 +43,7 @@ config MALI_KUTF_IRQ_TEST
 config MALI_KUTF_CLK_RATE_TRACE
 	bool "Build Mali KUTF Clock rate trace test module"
 	depends on MALI_KUTF
-	default y
+	default n
 	help
 	  This option will build the clock rate trace portal test module.
 	  It can test the clocks integration into the platform and exercise some
@@ -55,7 +55,7 @@ config MALI_KUTF_CLK_RATE_TRACE
 config MALI_KUTF_MGM_INTEGRATION_TEST
 	bool "Build Mali KUTF MGM integration test module"
 	depends on MALI_KUTF
-	default y
+	default n
 	help
 	  This option will build the MGM integration test module.
 	  It can test the implementation of PTE translation for specific
@@ -69,5 +69,5 @@ config MALI_KUTF_MGM_INTEGRATION_TEST
 
 config UNIT_TEST_KERNEL_MODULES
        bool
-       default y if UNIT_TEST_CODE && BACKEND_KERNEL
+       default n if UNIT_TEST_CODE && BACKEND_KERNEL
        default n
